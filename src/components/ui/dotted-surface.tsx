@@ -105,6 +105,7 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 
     // ── Resize ──────────────────────────────────────────
     function onResize() {
+      if (!container) return;
       const w = container.offsetWidth;
       const h = container.offsetHeight;
       camera.aspect = w / h;
